@@ -20,10 +20,10 @@
 <p><%= label_tag 'password_confirmation', 'Confirm Password' %><br/>
 <%= f.password_field :password_confirmation %></p>
 
-<!-- Uncomment this if you want this functionality
+Uncomment this if you want this functionality
 <% for role in Role.find(:all, :order => :name) %>
 		<%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %> <%= role.name %>
-#-->
+
 
 <% end %>
 
