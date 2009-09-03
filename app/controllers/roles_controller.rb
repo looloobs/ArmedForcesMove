@@ -4,16 +4,14 @@ class RolesController < ApplicationController
   end
 
   def new 
+    
     @role = Role.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @role }
-    end
+   render :layout => 'users'
   end
 
   def create
-    
+     
     @role = Role.new(params[:role])
     respond_to do |format|
       if @role.save
