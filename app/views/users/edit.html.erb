@@ -1,12 +1,17 @@
-<% form_for(@user) do |f| %>
-Username
+<% form_for(current_user) do |f| %>
+
+<p>
+<%= f.label :name %><br />
+   <%= f.text_field :name %>
+</p>
+<p>
+Username<br />
 <%= text_field 'user', 'login' %>
-
-				
-
-Email Address
+</p>
+<p>
+Email Address<br />
 <%= text_field 'user', 'email' %>
-
+</p>
 
 
 <%= submit_tag 'Edit' %>
