@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  level: 
+  info: 
+  onpost: 
+  type: 
+  name: 
+  address: 
+  city: 
+  state: 
+  zip: 
+  web: 
+  phone: MyString
+
+two:
+  level: 
+  info: 
+  onpost: 
+  type: 
+  name: 
+  address: 
+  city: 
+  state: 
+  zip: 
+  web: 
+  phone: MyString

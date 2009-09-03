@@ -1,0 +1,25 @@
+<%= render_flash_messages %>
+
+
+<div id="shop">
+<div id="left">	
+<h1><%= @shop.name %> <%= rank_image_tag(@shop.average_rates.to_i) %><br /></h1>
+<%=h @shop.address %><br />
+<%=h @shop.city %>, <%=h @shop.state %> <%=h @shop.zip %><br />
+<%=h @shop.phone %><br />
+<%= link_to @shop.web, @shop.web %><br />
+</div>
+<div id="right">
+<div class="shop_extras">
+<%=h @neighborhood.name %><br />
+<%=h @shopcategories.name %><br />
+<%=h @shop.store %><br />
+
+    </div>
+  </div>
+<span class="addcomment"><%= link_to image_tag("/images/add_a_comment.png", :border=>0), new_installation_shop_comment_path(@installation, @shop) %></span>
+
+<%= render :partial => "shared/comment", :collection => @comment %>
+</div>
+
+

@@ -1,0 +1,8 @@
+<h2>Grants tagged with <%= params[:tag] %></h2>
+
+<ul>
+  <% @question.each do |ques| %>
+    <li><%= link_to ques.title, 
+            :action => 'show', :id => ques.id  %></li>
+  <% end %>
+</ul>

@@ -1,0 +1,32 @@
+<% @learns.each do |learn| %>
+<div id= "eat">
+<table>
+<tr>
+<td>
+<div id= "eat_main">	
+<%= link_to learn.name, learn.web %> <%= rank_image_tag(learn.average_rates.to_i) %><br />
+<%=h learn.address %><br />
+<%=h learn.city %>, <%=h learn.state %> <%=h learn.zip %><br />
+<%=h learn.phone %><br />
+<span class="hl"><%= link_to 'Read Reviews', installation_learn_path(@installation, learn) %></span>
+</div>
+<div id= "eat_extras">
+<span class="red"></span><%=h learn.neighborhood %><br />
+<span class="red"></span><%=h learn.category %><br />
+<span class="red">Type:</span><%=h learn.type %><br />
+<span class="red">On <%= @installation.name %>:</span><span class="thumbs"><%=eat_image_tag(learn.onpost )%></span><br />
+<br />
+
+		</div>
+	</td>
+</tr>
+
+
+
+
+
+<p>
+	</table></div>
+<% end %>
+
+<br /

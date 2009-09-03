@@ -1,0 +1,24 @@
+<%= render_flash_messages %>
+
+<div id="school">
+<div id="left">
+<h1><%=h @school.name %><%= rank_image_tag(@school.average_rates.to_i) %><br /></h1>
+<%=h @school.address %><br />
+<%=h @school.city %>, <%=h @school.state %> <%=h @school.zip %><br />
+<%=h @school.web %><br />
+<%=h @school.phone %><br />
+</div>
+<div id="right">
+<div class="school_extras">
+<%=h @neighborhood.name %><br />
+<%=h @school.level %><br />
+<%=h @school.type %><br />
+<%=h @school.onpost %><br />
+</div>
+</div>
+<span class="addcomment"><%= link_to image_tag("/images/add_a_comment.png", :border=>0), new_installation_school_comment_path(@installation, @school) %></span>
+
+
+<%= render :partial => "shared/comment", :collection => @comment %>
+</div>
+

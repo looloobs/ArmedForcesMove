@@ -1,0 +1,23 @@
+
+<h1>New Comment</h1>
+<div id="form">
+<% form_for @comment, :url => polymorphic_path([@parents, :comments].flatten) do |f| %>
+<%= f.error_messages :header_message => "Invalid Restaurant!", 
+:message => "You'll need to fix the following fields:", :header_tag => :h4 %>
+
+
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.label :stars %><br />
+    <%= f.select(:stars, [["Select One", ""], ["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"]]) %> 
+  </p>
+	<%= hidden_field_tag('comment[user_id]', @current_user.id) %>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+</div>
+<%= link_to 'Back', polymorphic_path([@parents].flatten) %>

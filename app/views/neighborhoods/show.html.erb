@@ -1,0 +1,75 @@
+<%= render_flash_messages %>
+
+<h1><%=h @neighborhood.name %></h1>
+<div class= "indent">
+<p>
+<%=h @neighborhood.distance %>
+<%=h @neighborhood.drive %>
+<%=h @neighborhood.info %>
+<p>
+<h2>Preschools in <%=h @neighborhood.name %></h2>
+
+<% @preschools.each do |school| %>
+<div id= "school">
+<table>
+<tr>
+    <td>
+	<div id= "school_hoods">	
+		<h1><%= link_to school.name, installation_school_path(@installation, school) %> <%= rank_image_tag(school.average_rates.to_i)	%><br /></h1>
+		<%= link_to school.web, school.web %><br />
+	</td>
+	</div>
+</tr>
+</table>
+</div>
+<% end %>
+<p>
+<h2>Elementary Schools in <%=h @neighborhood.name %></h2>
+<% @elementary.each do |school| %>
+<div id= "school">
+<table>
+<tr>
+    <td>
+	<div id= "school_hoods">	
+		<h1><%= link_to school.name, installation_school_path(@installation, school) %> <%= rank_image_tag(school.average_rates.to_i)	%><br /></h1>
+		<%= link_to school.web, school.web %><br />
+	</td>
+	</div>
+</tr>
+</table>
+</div>
+<% end %>
+<p>
+<h2>Middle Schools in <%=h @neighborhood.name %></h2>
+<% @middle.each do |school| %>
+<div id= "school">
+<table>
+<tr>
+    <td>
+	<div id= "school_hoods">	
+		<h1><%= link_to school.name, installation_school_path(@installation, school) %> <%= rank_image_tag(school.average_rates.to_i)	%><br /></h1>
+		<%= link_to school.web, school.web %><br />
+	</td>
+	</div>
+</tr>
+</table>
+</div>
+<% end %>
+<p>
+<h2>High Schools in <%=h @neighborhood.name %></h2>
+<% @high.each do |school| %>
+<div id= "school">
+<table>
+<tr>
+    <td>
+	<div id= "school_hoods">	
+		<h1><%= link_to school.name, installation_school_path(@installation, school) %> <%= rank_image_tag(school.average_rates.to_i)	%><br /></h1>
+		<%= link_to school.web, school.web %><br />
+	</td>
+	</div>
+</tr>
+</table>
+</div>
+<% end %>
+</div>
+

@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Rank</th>
+    <th>Size</th>
+  </tr>
+
+<% @onposts.each do |onpost| %>
+  <tr>
+    <td><%=h onpost.name %></td>
+    <td><%=h onpost.rank %></td>
+    <td><%=h onpost.size %></td>
+    <td>review </td><br />
+  </tr>
+<% end %>
+</table>

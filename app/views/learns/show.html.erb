@@ -1,0 +1,33 @@
+
+<span class="addeat"><%= link_to image_tag("/images/add_eat.png", :border=>0), new_installation_learn_path(@installation, @learn) %></span>
+
+<div id= "eat_specific">
+<table>
+<tr>
+<td>
+<div id= "eat_main">	
+<%= link_to @learn.name, @learn.web %> <%= rank_image_tag(@learn.average_rates.to_i) %><br />
+<%=h @learn.address %><br />
+<%=h @learn.city %>, <%=h @learn.state %> <%=h @learn.zip %><br />
+<%=h @learn.phone %><br />
+</div>
+<div id= "eat_extras">
+<span class="red">Type:</span><%=h @learn.category %><br />
+<span class="red">Type:</span><%=h @learn.neighborhood %><br />
+<span class="red">Type:</span><%=h @learn.type %><br />
+<span class="red">Onpost?</span><%=eat_image_tag(@learn.onpost )%></span><br />
+
+		</div>
+	</td>
+</tr>
+
+
+
+
+
+<p>
+	</table></div>
+<p>
+<span class="addcomment"><%= link_to image_tag("/images/add_a_comment.png", :border=>0), new_installation_learn_comment_path(@installation, @learn) %></span>
+
+<%= render :partial => "shared/comment", :collection => @comment %> 

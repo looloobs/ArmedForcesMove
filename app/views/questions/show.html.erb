@@ -1,0 +1,23 @@
+<div id="ques">
+<h1>
+  <%=h @question.question %><%= link_to image_tag("/images/answer_icon.png", :border=>0), new_installation_question_answer_path(@installation, @question) %>
+</h1>
+<div id="tags">
+<%= clickable_tag_list(@question.tags) %>
+</div>
+</div>
+<p>
+
+<% @question.answers.each do |answer| %>
+<div class="box-one">
+	<img src="/images/comment_top.png" alt="" />
+			<div class="inside">
+				<p><td><%=h answer.content %></td></p>
+			</div>
+	<img src="/images/comment_bottom.png" alt="" />
+</div>
+<% end %>
+</p>
+<p>
+<br />
+

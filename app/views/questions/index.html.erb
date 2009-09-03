@@ -1,0 +1,18 @@
+
+<span class="addeat"><%= link_to image_tag("/images/ques_icon.png", :border=>0), new_installation_question_path(@installation, @question) %></span>
+
+
+<% @questions.each do |question| %>
+<div id= "ques">
+    <%= link_to question.question, installation_question_path(@installation, question) %><br />
+<div id= "ques_answer">
+	 <%= pluralize(question.answers.count,'answer')%> to this question. <%= link_to image_tag("/images/answer_icon.png", :border=>0), new_installation_question_answer_path(@installation, question) %><br />
+<div id= "tags">
+	<%= clickable_tag_list(question.tags) %>
+</div>
+	</div>
+		</div>
+<% end %>
+
+
+

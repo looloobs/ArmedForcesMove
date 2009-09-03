@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  installation: 
+  neighborhood: MyString
+  distance: MyString
+  drive: MyString
+  content: MyText
+
+two:
+  installation: 
+  neighborhood: MyString
+  distance: MyString
+  drive: MyString
+  content: MyText

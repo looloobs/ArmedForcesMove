@@ -1,0 +1,1041 @@
+/*body { 
+	margin:0;
+	padding:0;
+	color:#000;
+	background:#fff; 
+	}
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+#wrap {
+ 	width:1000px;
+ 	margin:0 auto;
+	background:#99c;
+ }
+
+
+/*pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #000; }
+/*a:visited { color: #666; }
+a:hover { color: #fff; background-color:#000; }
+
+/*#background {
+	top: 0; 
+	left: 0; 
+	background-color: #e1f0f7; 
+
+}
+
+div#header {
+	background-color:#fff;
+	height:75px;
+	background-image: url(/images/afm_logo.jpg);
+	background-repeat: no-repeat;
+}
+div#header a {
+	display: block;
+	height:75px;
+	width:300px;
+}
+div#nav {
+	font-family:arial;
+	font-size: 20px;
+	color:#fff;
+	position:top;
+	float:left;
+	margin-left:0px;
+	margin-top: -150px;
+}
+
+
+.housing {
+	background-color:#f5fca6;
+	margin-left: 225px;
+	margin-top:-390px;
+	float:left;
+	width:700px;
+	font-family:arial;
+	font-size: 11px;
+	color:#000;
+}
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}*/
+#wrap {
+ 	width:1000px;
+ 	margin:0 auto;
+ }
+#header_bg_hack {
+  position: relative;
+  height: 150px;
+  background: url(../images/bg_white.jpg) repeat-x; 
+  
+ 
+}
+
+#header {
+	position:absolute;
+	background-repeat: no-repeat;
+	background-color:#fff;
+	height:100px;
+	margin-top:-100px;
+	padding:0px;
+
+}
+#logo {
+	position:absolute;
+}
+#admin_header {
+	position:absolute;
+	background-image: url(/images/afm_logo.jpg);
+	background-repeat: no-repeat;
+	height:100px;
+	width:500px;
+
+	padding:0px;
+
+}
+#user{
+	position:relative;
+	margin-top:-40px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+}
+
+body {
+    margin:0;
+    padding:0px;
+    border:0;			/* This removes the border around the viewport in old versions of IE */
+    width:100%;
+    min-width:1000px;    /* Minimum width of layout - remove line if not required */
+	background-color:#DFE8F3;					/* The min-width property does not work in old versions of Internet Explorer */
+	font-size:90%;
+
+}
+
+h1, h2, h3 {
+    margin:0 0 0 0;
+    padding:0;
+}
+h1 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 18px;
+	color: #102D49;
+}
+h2 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 16px;
+	color: #102D49;
+}
+p {
+    margin:.4em 0 .8em 0;
+    padding:0;
+}
+img {
+	
+}
+.right {
+	float:right;
+}
+.indent {
+	margin-left:50px;
+}
+.hl {
+	background: #5576A5;
+	color:#fff;
+	text-decoration:none;
+	}
+.hl a {
+	color:#fff;
+	text-decoration:none;	
+}
+
+/* login */
+#login_area {
+	margin:50px;
+	padding:25px;
+	background:#fff;
+	height:325px;
+	width:425px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+}
+#login_boxes {
+	padding:10px;
+	margin:30px;
+	height:105px;
+	width:450px;
+}
+#login_boxes img {
+	display: block;
+	position: relative;
+	float:right;
+	margin-right:100px;
+}
+.login_boxes a {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 20px;
+	color: #D42027;
+	padding: 3px;
+	text-decoration:none;
+}
+/* forms */
+#form {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 15px;
+	color: #102D49;
+}
+#form input {
+	background:#B8C7DB;
+	border:0px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 15px;
+	color: #102D49;	
+}
+#form select {
+	background:#B8C7DB;
+	border:0px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 15px;
+	color: #102D49;	
+}
+#errorExplanation{
+	width:500px;
+}
+.fieldWithErrors{
+	color:#D42027;
+}
+#errorExplanation h4 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 18px;
+	color: #D42027;
+}
+#errorExplanation p {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 14px;
+	color: #D42027;
+}
+#errorExplanation ul li {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #D42027;
+}
+
+
+#flash_messages {
+  width:500px;
+  margin-bottom: 10px;
+}
+ 
+#flash_messages p {
+  padding: 15px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 14px;
+
+}
+ 
+#flash_messages p.error {
+  background: #fff;
+  border: 1px solid #D42027;
+}
+ 
+#flash_messages p.notice {
+  background: #fff;
+  border: 1px solid #D42027;
+}
+ 
+#flash_messages p.message {
+  background: #fff;
+  border: 1px solid #D42027;
+}
+
+
+/* installations */
+#installation {
+	display:inline;
+	width:300px;
+	height:300px;
+}
+#installation a {
+	padding:15px;
+}
+		ul#menu {
+			list-style: none;
+			margin-left:600px;
+			margin-top:75px;
+			}
+			ul#menu li {
+				display: inline;
+			}
+			ul#menu li a  {
+				text-indent: -9999px;
+				display: block;
+				height: 32px;
+				width: 45px;
+				float: left;
+				
+				}
+				ul#menu li a.live {
+					background: url(/images/buttons/live.jpg) no-repeat bottom center;
+					width: 45px;
+					}
+				ul#menu li a.learn {
+					background: url(/images/buttons/learn.jpg) no-repeat bottom center;
+					width: 45px;
+				}
+				ul#menu li a.eat {
+					background: url(/images/buttons/eat.jpg) no-repeat bottom center;
+					width: 45px;
+					}
+				ul#menu li a.shop {
+					background: url(/images/buttons/shop.jpg) no-repeat bottom center;
+					width: 45px;
+					}
+				ul#menu li a.play {
+					background: url(/images/buttons/play.jpg) no-repeat bottom center;
+					width: 45px;
+					}
+				ul#menu li a.qa {
+					background: url(/images/buttons/qa.jpg) no-repeat bottom center;
+					width: 45px;
+					}
+					ul#menu li a.live:hover, ul#menu li a.live:active,
+					ul#menu li a.learn:hover, ul#menu li a.learn:active,
+					ul#menu li a.eat:hover, ul#menu li a.eat:active,
+					ul#menu li a.shop:hover, ul#menu li a.shop:active, 
+					ul#menu li a.play:hover, ul#menu li a.play:active,
+					ul#menu li a.qa:hover, ul#menu li a.qa:active {
+						background-position: top center;
+					}
+				body#live ul#menu li a.live,
+				body#about ul#menu li a.learn,
+				body#contact ul#menu li a.contact {
+					background-position: center center;
+				}
+
+
+table{
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	border-collapse: collapse;
+	text-align: left;
+	width:500px;
+	
+	}
+
+th{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 16px;
+	color: #102D49;
+	padding: 3px;
+	border-bottom: 2px solid #102D49;
+	}
+td{
+	color: #669;
+	padding: 9px 11px 0px 8px;
+	font-size: 12px;
+	}
+tbody tr:hover td
+	{
+		color: #009;
+	}
+
+/* 'widths' sub menu */
+#layoutdims {
+	clear:both;	
+	margin:0px;
+	padding:6px 15px !important;
+	text-align:right;
+	
+}
+/* column container */
+.colmask {
+	position:relative;		/* This fixes the IE7 overflow hidden bug and stops the layout jumping out of place */
+    clear:both;
+    float:left;
+    width:100%;				/* width of whole page */
+	overflow:hidden;		/* This chops off any overhanging divs */
+	
+}
+/* holy grail 3 column settings */
+.holygrail {
+    border:1px;
+	border-color:#e1f0f7;                    	/* Right column background colour */
+}
+.holygrail .colmid {
+    float:left;
+    width:200%;
+    margin-left:-180px; 	/* Width of right column */
+    position:relative;
+    right:100%;
+						/* Centre column background colour */
+	
+}
+.holygrail .colleft {
+    float:left;
+    width:100%;
+    margin-left:-51%;
+    position:relative;
+    left:400px;         	/* Left column width + right column width */
+	
+	
+}
+.holygrail .col1wrap {
+    float:left;
+    width:50%;
+    position:relative;
+    right:200px;        	/* Width of left column */
+    padding-bottom:1em; 	/* Centre column bottom padding. Leave it out if it's zero */
+	border-left:1px solid #000;
+
+	
+
+}
+.holygrail .col1 {
+    margin:0px 200px;     	/* Centre column side padding:
+                        	Left padding = left column width + centre column left padding width
+                        	Right padding = right column width + centre column right padding width */
+    position:relative;
+    left:200%;
+    overflow:hidden;
+	
+	
+	
+}
+.holygrail .col2 {
+    float:left;
+    float:right;			/* This overrides the float:left above */
+    width:200px;        	/* Width of left column content (left column width minus left and right padding) */
+    position:relative;
+    right:0px;         	/* Width of the left-had side padding on the left column */
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color:#fff;
+	padding-left: 0px;
+	
+	
+}
+.holygrail .col3 {
+    float:left;
+    float:right;			/* This overrides the float:left above */
+    width:170px;        	/* Width of right column content (right column width minus left and right padding) */
+    margin-right:45px;  	/* Width of right column right-hand padding + left column left and right padding */
+    position:relative;
+    left:50%;
+
+	
+}
+
+#sidebar{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 13px;
+	color: #102D49;
+	
+	
+}
+.inprocessing {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+	background: url(/images/inprocessing.png) no-repeat top left;
+	float:left;
+	margin-right:50px;
+	padding-left:55px;
+	padding-top:15px;
+	height:40px;
+
+}
+.child {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+	background: url(/images/child.png) no-repeat top left;
+	float:left;
+	margin-right:50px;
+	padding-left:50px;
+	padding-top:15px;
+	height:40px;
+
+}
+.temp {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+	background: url(/images/lodging.png) no-repeat top left;
+	float:left;
+	margin-right:50px;
+	padding-left:50px;
+	padding-top:15px;
+	height:40px;
+
+}
+.school {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+	background: url(/images/school.png) no-repeat top left;
+	float:left;
+	margin-right:50px;
+	padding-left:50px;
+	padding-top:15px;
+	height:40px;
+
+}
+.house {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+	background: url(/images/housing.png) no-repeat top left;
+	float:left;
+	margin-right:50px;
+	padding-left:50px;
+	padding-top:15px;
+	height:40px;
+
+}
+.commissary {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+	background: url(/images/commissary.png) no-repeat top left;
+	float:left;
+	margin-right:50px;
+	padding-left:50px;
+	padding-top:15px;
+	height:40px;
+
+}
+.hospital {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+	background: url(/images/hospital.png) no-repeat top left;
+	float:left;
+	margin-right:50px;
+	padding-left:50px;
+	padding-top:15px;
+	height:40px;
+
+}
+#comment {
+	background-image:url(/images/comment_blurb.png) no-repeat;
+	width:530px;
+	height:110px;
+	margin:20px;
+	padding:10px;
+	
+}
+.box-one			{ width: 500px; background: url(/images/comment_middle.png) center repeat-y; margin: 10px 0 ;}
+.box-one .inside	{ padding: 0 15px; }
+
+
+.addcomment {
+
+padding-left:360px;
+
+}
+.stars {
+display: inline;
+padding-left:170px;
+}
+
+
+.rate {
+  position:relative;
+  float:left;
+  background:url(/images/ratings/red_bubble.png) no-repeat center center;
+  height:36px;
+  width:33px;
+  margin-left:-10px;
+  padding-left:20px;
+  padding-top:10px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 20px;
+  font-weight:bold;
+  color: #fff;
+  
+}
+
+.stars img {
+  padding: 3px;
+}
+/*housing */
+
+
+#housing {
+	overflow: hidden;
+	width:500px;
+	margin:3px;
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+	margin-bottom:8px;
+	clear;
+	/*border:4px;
+	border-color:#5576A5;
+	border-style:solid;*/
+}
+
+.housing_detail_image {
+	margin-top:10px;
+	float:left;
+	width:500px;
+	height:150px;
+}
+
+#housing_main {
+	border-bottom:1px;
+	border-bottom-color:#102D49;
+	border-bottom-style:dotted;
+	margin-bottom:15px;
+}
+#housing h1 {
+	font-family:georgia,times,serif; 
+	font-weight:normal;
+	font-size:20px;
+}
+#housing h1 a {
+	font-family:georgia,times,serif; 
+	font-weight:normal;
+	font-size:20px;
+}
+#housing h1 a:hover {
+	font-family:georgia,times,serif; 
+	font-weight:normal;
+	font-size:20px;
+	background:white;
+}
+#housing_main a {
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 14px;
+	color: #102D49;
+	text-decoration:none;
+}
+#housing a {
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+	text-decoration:none;
+}
+#housing_extras {
+
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+}
+
+.red {
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 13px;
+	color:#D42027;
+}
+.thumbs {
+	vertical-align:-35%;
+	margin:3px;
+}
+.addeat {
+padding-left:400px;
+}
+/*-- End of Eats --*/
+/*eats */
+#eat {
+	overflow: hidden;
+	width:500px;
+	margin:3px;
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+	margin-bottom:8px;
+	clear;
+	/*border:4px;
+	border-color:#5576A5;
+	border-style:solid;*/
+}
+
+#eat_main {
+	border-bottom:1px;
+	border-bottom-color:#102D49;
+	border-bottom-style:dotted;
+	margin-bottom:15px;
+}
+#eat h1 {
+	font-family:georgia,times,serif; 
+	font-weight:normal;
+	font-size:20px;
+}
+#eat h1 a {
+	font-family:georgia,times,serif; 
+	font-weight:normal;
+	font-size:20px;
+}
+#eat h1 a:hover {
+	font-family:georgia,times,serif; 
+	font-weight:normal;
+	font-size:20px;
+	background:white;
+}
+#eat_main a {
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 14px;
+	color: #102D49;
+	text-decoration:none;
+}
+#eat a {
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+	text-decoration:none;
+}
+#eat_extras {
+	float:right;
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+}
+
+.red {
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 13px;
+	color:#D42027;
+}
+.thumbs {
+	vertical-align:-35%;
+	margin:3px;
+}
+.addeat {
+padding-left:400px;
+}
+/*-- End of Eats --*/
+/*schools */
+#left {
+	width: 45%;
+	float: left;
+}
+
+#right {
+	width: 45%;
+	float: right;
+	padding-top:25px;
+	text-align:right;
+}
+
+#school {
+	overflow: hidden;
+	width:500px;
+	margin:3px;
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+	margin-bottom:8px;
+	clear;
+	/*border:4px;
+	border-color:#5576A5;
+	border-style:solid;*/
+}
+
+#school_main {
+	border-bottom:1px;
+	border-bottom-color:#102D49;
+	border-bottom-style:dotted;
+	padding-bottom:5px;
+}
+#school h1 {
+	font-family:georgia,times,serif; 
+	font-weight:normal;
+	font-size:20px;
+}
+#school h1 a {
+	font-family:georgia,times,serif; 
+	font-weight:normal;
+	font-size:20px;
+}
+#school h1 a:hover {
+	font-family:georgia,times,serif; 
+	font-weight:normal;
+	font-size:20px;
+	background:white;
+}
+#school_main a {
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 14px;
+	color: #102D49;
+	text-decoration:none;
+}
+#school_hoods a {
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 14px;
+	color: #102D49;
+	text-decoration:none;
+}
+.school_extras {
+	float:right;
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+}
+
+.red {
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 13px;
+	color:#D42027;
+}
+.thumbs {
+	vertical-align:-35%;
+	margin:3px;
+}
+.addeat {
+padding-left:400px;
+}
+/*-- End of Schools --*/
+/*Shops*/
+#shop {
+	overflow: hidden;
+	width:500px;
+	margin:3px;
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+	margin-bottom:8px;
+	clear;
+	/*border:4px;
+	border-color:#5576A5;
+	border-style:solid;*/
+}
+#shop h1 {
+	font-family:georgia,times,serif; 
+	font-weight:normal;
+	font-size:20px;
+}
+#shop h1 a {
+	font-family:georgia,times,serif; 
+	font-weight:normal;
+	font-size:20px;
+}
+#shop h1 a:hover {
+	font-family:georgia,times,serif; 
+	font-weight:normal;
+	font-size:20px;
+	background:white;
+}
+.shop_specific {
+	float:right;
+	margin-top:-15px;
+}
+
+#shop_main {
+	border-bottom:1px;
+	border-bottom-color:#102D49;
+	border-bottom-style:dotted;
+	margin-bottom:15px;
+	padding-bottom:5px;
+}
+
+#shop a {
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+	text-decoration:none;
+}
+#shop_extras {
+	float:right;
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+}
+
+.red {
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 13px;
+	color:#D42027;
+}
+.thumbs {
+	vertical-align:-35%;
+	margin:3px;
+}
+.addshop {
+padding-left:400px;
+}
+/*-- End of Shops --*/
+/*Plays*/
+#play {
+	width:500px;
+	margin:3px;
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+	/*border:4px;
+	border-color:#5576A5;
+	border-style:solid;*/
+}
+#play h1 {
+	font-family:georgia,times,serif; 
+	font-weight:normal;
+	font-size:20px;
+}
+#play h1 a {
+	font-family:georgia,times,serif; 
+	font-weight:normal;
+	font-size:20px;
+}
+#play h1 a:hover {
+	font-family:georgia,times,serif; 
+	font-weight:normal;
+	font-size:20px;
+	background:white;
+}
+
+
+#play_main {
+	border-bottom:1px;
+	border-bottom-color:#102D49;
+	border-bottom-style:dotted;
+	margin-bottom:15px;
+	padding-bottom:5px;
+}
+
+#play a {
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 14px;
+	color: #102D49;
+	text-decoration:none;
+}
+#play_extras {
+	float:right;
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+}
+
+
+.red {
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 13px;
+	color:#D42027;
+}
+.thumbs {
+	vertical-align:-35%;
+	margin:3px;
+}
+.addshop {
+padding-left:400px;
+}
+/*-- End of Plays --*/
+/*Question & Answer*/
+#ques {
+	width:500px;
+	padding-top:20px;
+	padding-bottom:20px;
+	border-bottom:1px;
+	border-bottom-color:#102D49;
+	border-bottom-style:dotted;
+}
+#ques a {
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 20px;
+	color: #102D49;
+	text-decoration:none;
+}
+#ques h1 {
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 18px;
+	color: #102D49;
+	text-decoration:none;
+}
+#ques p {
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 15px;
+	color: #102D49;
+	text-decoration:none;
+}
+#ques a:hover {
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 20px;
+	color: #5576A5;
+	text-decoration:none;
+}
+#ques_answer {
+	padding-left:50px;
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 14px;
+	color: #D42027;
+	text-decoration:none;
+}
+#ques_answer_detail {
+	width:475px;
+	margin-bottom:15px;
+	padding-left:25px;
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 14px;
+	color: #D42027;
+	background:white;
+	text-decoration:none;
+}
+#tags {
+	float:right;
+	padding-right:30px;
+}
+#tags a {
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 14px;
+	color: #102D49;
+	text-decoration:none;
+}
+#tags a:hover {
+	font-family: "Lucida Grande", Sans-Serif;
+	font-size: 14px;
+	color: #5576A5;
+	text-decoration:none;
+}
+/* Footer styles */
+#footer {
+    clear:both;
+    float:left;
+    width:100%;
+	border-top:1px solid #000;
+}
+
+

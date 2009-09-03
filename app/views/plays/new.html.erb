@@ -1,0 +1,51 @@
+<h1>New play</h1>
+<div id="form">
+<% form_for ([:installation, @play]) do |f| %>
+ <%= f.error_messages :header_message => "Invalid play!", 
+:message => "You'll need to fix the following fields:", :header_tag => :h4 %>
+
+
+
+<%= hidden_field_tag('play[installation_id]', @installation.id) %>
+
+  <p>
+    <%= f.label :play_area_id %><br />
+   <%= f.collection_select(:play_area_id, @playareas, :id, :name, {:prompt => true}) %>
+  </p>
+  <p>
+	<%= f.label :play_category_id %><br />
+	<%= f.collection_select(:play_category_id, @playcategories, :id, :name, {:prompt => true}) %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </p>
+  <p>
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :web %><br />
+    <%= f.text_field :web %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+</div>

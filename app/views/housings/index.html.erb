@@ -1,0 +1,30 @@
+<h1><%= @installation.name %>: Places to Live</h1>
+<br />
+<% @housings.each do |housing| %>
+<div id= "housing">
+<div id= "housing_main">	
+<h1><%= link_to housing.name, installation_housing_path(@installation, housing) %> <%= rank_image_tag(housing.average_rates.to_i) %><br /></h1>
+<div class="housing_specific">  
+Rank: <%= housing.rank %><br />
+Bedrooms: <%= housing.bedrooms %> | Bathrooms: <%= housing.bathrooms %>
+</div>
+</div>
+</div>
+<% end %>
+<br />
+<br />
+<br />
+<h1><%=h @installation.name %>: Neighborhoods</h1>
+<br />
+<% @neighborhoods.each do |neighborhood| %>
+<div id= "housing">
+<div id= "housing_main">	
+<h1><%= link_to neighborhood.name, installation_neighborhood_path(@installation, neighborhood) %> <%= rank_image_tag(neighborhood.average_rates.to_i) %><br /></h1>
+<div class="housing_specific">  
+<%= neighborhood.drive %><br />
+<%= neighborhood.distance %>
+</div>
+</div>
+</div>
+<% end %>
+

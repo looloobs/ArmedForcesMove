@@ -1,0 +1,49 @@
+<% content_for(:sidebar) do %>
+<p>
+  <b>Name:</b>
+
+  <%=h @installation.name %>
+</p>
+
+<p>
+  <b>Zipcode:</b>
+  <%=h @installation.zipcode %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @installation.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @installation.state %>
+</p>
+<p>
+  <b>In-Processing Phone Number:</b><br />
+  <%=h @installation.inprocessing %>
+</p>
+<p>
+  <b>Temporary Lodging Phone Number:</b><br />
+  <%=h @installation.templodging %>
+</p>
+<p>
+  <b>Child Registration Phone Number:</b><br />
+  <%=h @installation.family %>
+</p>
+<p>
+  <b>Commissary Phone Number:</b><br />
+  <%=h @installation.inprocessing %>
+</p>
+<% end %>
+
+I am moving to <%=h @installation.name %> and I need to know WHERE TO:<br />
+<%= link_to 'live', installation_housings_path(@installation) %><br />
+<%= link_to 'learn' %><br />
+<%= link_to 'eat' %><br />
+<%= link_to 'shop' %><br />
+<%= link_to 'play' %><br />
+
+
+<%= link_to 'Edit', edit_installation_path(@installation) %> |
+<%= link_to 'Back', installations_path %>

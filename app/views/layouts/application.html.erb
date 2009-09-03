@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Installations: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'application' %>
+  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag "jquery-1.2.6" %>
+  <%= yield (:head) %>
+  
+</head>
+<body>
+	<div id="header_bg_hack"></div>
+	
+	<div id="wrap">
+		<%= render(:partial => "shared/header") %>
+		<div id = "background">
+			<div class="content">
+		       
+		      </div>
+	<div id="layoutdims">
+	</div>
+	<div class="colmask holygrail">
+	    <div class="colmid">
+	        <div class="colleft">
+	            <div class="col1wrap">
+	                <div class="col1">
+						<!-- Column 1 start -->
+					      <div id="flash" class="flash_html">
+					      <% unless flash[:notice].blank? %>
+					        <%= flash[:notice]%>
+					      <% end %>
+					        <% unless flash[:error].blank? %>
+					      <%= flash[:error]%>
+					      <% end %>
+					     </div>
+
+						<%= yield :housing %>
+						<%= yield %>
+						
+						
+					<!-- Column 1 end -->
+	                </div>
+	            </div>
+	            <div class="col2">
+					<!-- Column 2 start -->
+					<%= render(:partial => "shared/sidebar") %>
+					
+	                <!-- Column 2 end -->
+	            </div>
+	            <div class="col3">
+					<!-- Column 3 start -->
+	                
+					<!-- Column 3 end -->
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="sidebar">
+			
+			<div class="housing">
+				
+			</div>
+	</div>
+		
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+
+<h1><%=h @installation.name %> Housing</h1>
+<table>
+  <tr>
+	<th></th>
+    <th>Name</th>
+    <th>Rank</th>
+	<th>Bed</th>
+	<th>Bath</th>
+	<th>Reviews</th>
+  </tr>
+
+<% @onposts.each do |onpost| %>
+  <tr>
+	<td><%= rank_image_tag(onpost.average_rates.to_i) %></td>
+    <td><%=h onpost.name %></td>
+    <td><%=h onpost.rank %></td>
+    <td><%=h onpost.size %></td>
+	<td><%= onpost.average_stars %></td>
+    <td><%= link_to 'Read More', installation_onpost_path(@installation, onpost) %></td>
+	
+	</td>
+
+  </tr>
+
+</table>
+<p>
+<table>
+	<h1><%=h @installation.name %> Surrounding Neighborhoods</h1>
+	<tr>
+	<th></th>
+    <th>Name</th>
+    <th>Drive Time</th>
+	<th>Distance</th>
+  </tr>
+
+  <tr>
+	<td></td>
+    <td><%=h onpost.neighborhoods.name %></td>
+    <td><%=h onpost.neighborhoods.drive %></td>
+    <td><%=h onpost.neighborhoods.distance %></td>
+
+  </tr>
+
+
+<% end %>
+</table>
+
+

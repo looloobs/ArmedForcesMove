@@ -1,0 +1,46 @@
+
+<% content_for(:housing) do %>
+
+<div id="housing_detail">
+
+<p> 
+<%= rank_image_tag(@onpost.average_rates.to_i) %>
+<h1<%=h @onpost.name %></h1>
+
+
+
+
+<div id="housing_detail_image"></div>
+<div id="housing_detail_info">
+<p>
+  <b>Rank:</b>
+  <%=h @onpost.rank %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%=h @onpost.size %>
+</p>
+<p>
+  <b>Bedrooms:</b>
+  <%=h @onpost.rank %>
+</p>
+<p>
+  <b>Bathrooms:</b>
+  <%=h @onpost.rank %>
+</p>
+</div>
+	</div>
+<% end %>
+<span class="addcomment"><%= link_to image_tag("/images/add_a_comment.png", :border=>0), new_installation_onpost_comment_path(@installation, @onpost) %></span>
+
+<%= render :partial => "shared/comment", :collection => @comment %> 
+
+
+
+
+
+<%= link_to 'Edit' %> 
+<%= link_to 'Back' %>
+
+

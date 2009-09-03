@@ -1,0 +1,20 @@
+<%= error_messages_for 'user' %>
+<% form_tag(:action => 'update', :id => @user) do %>
+
+Username
+<%= text_field 'user', 'login' %>
+
+				
+
+Email Address
+<%= text_field 'user', 'email' %>
+
+
+    * <% for role in Role.find(:all, :order => :name) %> <%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %> <%= role.name %>
+      <% end %> 
+
+
+
+<%= submit_tag 'Edit' %>
+
+<% end %>

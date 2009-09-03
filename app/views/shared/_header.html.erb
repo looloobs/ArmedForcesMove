@@ -1,0 +1,27 @@
+
+<div id ="header">
+	<div id ="logo">
+<%= link_to image_tag("/images/afm_logo.jpg", :border=>0), '/' %>
+	</div>
+<div id="user">
+<% if logged_in? -%>
+<div id="user-bar-greeting">Logged in as <%= link_to_current_user :content_method => :login %></div>
+<div id="user-bar-action"  >(<%= link_to "Log out", logout_path, { :title => "Log out" }    %>)</div>
+<% else -%>
+<div id="user-bar-greeting"><%= link_to_login_with_IP 'Not logged in', :style => 'border: none;' %></div>
+<div id="user-bar-action"  ><%= link_to "Log in",  login_path,  { :title => "Log in" } %> /
+	<%= link_to "Sign up", signup_path, { :title => "Create an account" } %></div>
+<% end -%>
+
+</div>
+
+		<ul id="menu">	
+			<li><%= link_to 'live', installation_housings_path(@installation), :class => 'live'%></li>
+			<li><%= link_to 'learn', installation_schools_path(@installation), :class => 'learn' %></li>
+			<li><%= link_to 'eat', installation_eats_path(@installation), :class => 'eat' %></li>
+			<li><%= link_to 'shop', installation_shops_path(@installation), :class => 'shop' %></li>
+			<li><%= link_to 'play', installation_plays_path(@installation), :class => 'play' %></li>
+			<li><%= link_to 'Q&A', installation_questions_path(@installation), :class => 'qa' %></li>
+		</ul>
+
+</div>

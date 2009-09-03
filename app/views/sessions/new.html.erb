@@ -1,0 +1,25 @@
+<div id="login_area">
+<p style="font-size: 18pt; color:#D42027">Yikes!</p>
+It looks like you are not logged in.
+We know it is really annoying to have to sign into every site you visit, but we have to protect ourselves from the evil computerbots (see figure 1a.) that like to write false comments.
+<div id="login_boxes">
+	<%= image_tag ('/images/login/robot.png') %>
+	
+<% form_tag session_path do -%>
+<p><%= label_tag 'login' %><br />
+<%= text_field_tag 'login', @login %></p>
+
+<p><%= label_tag 'password' %><br/>
+<%= password_field_tag 'password', nil %></p>
+<p><%= submit_tag 'Log in' %></p>
+</div>
+
+<!-- Uncomment this if you want this functionality
+<p><%= label_tag 'remember_me', 'Remember me' %>
+<%= check_box_tag 'remember_me', '1', @remember_me %></p>
+-->
+<p>Not Signed Up? We only ask 4 simple questions. <span class="login_boxes"><%= link_to 'Sign Me Up!', new_user_path %></span></p>
+
+
+<% end -%>
+</div>

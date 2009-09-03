@@ -1,0 +1,54 @@
+<h1>New shop</h1>
+<div id="form">
+<% form_for ([:installation, @shop]) do |f| %>
+ <%= f.error_messages :header_message => "Invalid school!", 
+:message => "You'll need to fix the following fields:", :header_tag => :h4 %>
+
+
+
+<%= hidden_field_tag('shop[installation_id]', @installation.id) %>
+<p>
+<%= f.label :neighborhood_id %><br />
+<%= f.collection_select(:neighborhood_id, @neighborhoods, :id, :name, {:prompt => true}) %>
+</p>
+<p>
+<%= f.label :shop_categories_id %><br />
+<%= f.collection_select(:shop_categories_id, @shopcategories, :id, :name, {:prompt => true}) %>
+</p>
+<p>
+    <%= f.label :store %><br />
+    <%= f.select(:store, [["Please Select", ""], ["Chain Store", "Chain Store"], ["Local Store", "Local Store"]]) %> 
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+ 	<%= f.label :state %>
+    <%= f.text_field :state, :size => 2 %> 
+
+	<%= f.label :zip %>
+    <%= f.text_field :zip, :size => 5 %>
+  </p>
+  <p>
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :web %><br />
+    <%= f.text_field :web %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+</div>
+<%= link_to 'Back', shops_path %>

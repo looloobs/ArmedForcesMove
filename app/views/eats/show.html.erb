@@ -1,0 +1,25 @@
+<%= render_flash_messages %>
+
+
+<div id="eat">
+<div id="left">	
+<h1><%= link_to @eat.name %> <%= rank_image_tag(@eat.average_rates.to_i) %><br /></h1>
+<%=h @eat.address %><br />
+<%=h @eat.city %>, <%=h @eat.state %> <%=h @eat.zip %><br />
+<%=h @eat.phone %><br />
+<%= link_to @eat.web, @eat.web %><br />
+</div>
+<div id="right">
+<div class="eat_extras">
+<%=h @eat.food %><br />
+<%=h @eat.price %><br />
+<%=h  @eat.kids %><br />
+<%=special_type(@eat.special)%><br />
+    </div>
+  </div>
+<span class="addcomment"><%= link_to image_tag("/images/add_a_comment.png", :border=>0), new_installation_eat_comment_path(@installation, @eat) %></span>
+
+<%= render :partial => "shared/comment", :collection => @comment %>
+</div>
+
+

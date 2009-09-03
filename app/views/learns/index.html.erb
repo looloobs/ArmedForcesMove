@@ -1,0 +1,30 @@
+
+<span class="addeat"><%= link_to image_tag("/images/add_eat.png", :border=>0), new_installation_school_path(@installation, @school) %></span>
+
+<div id= "eat_specific">
+<table>
+<tr>
+<td>
+<div id= "eat_main">	
+<%= link_to @school.name, @school.web %> <%= rank_image_tag(@school.average_rates.to_i) %><br />
+<%=h @school.address %><br />
+<%=h @school.city %>, <%=h @school.state %> <%=h @school.zip %><br />
+<%=h @school.phone %><br />
+</div>
+<div id= "eat_extras">
+<span class="red">Type:</span><%=h @school.category %><br />
+<span class="red">Type:</span><%=h @school.neighborhood %><br />
+<span class="red">Type:</span><%=h @school.type %><br />
+<span class="red">Onpost?</span><%=eat_image_tag(@school.onpost )%></span><br />
+
+		</div>
+	</td>
+</tr>
+
+
+
+
+
+<p>
+	</table></div>
+<p>

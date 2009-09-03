@@ -1,0 +1,32 @@
+<h1>New housing</h1>
+<div id="form">
+<% form_for([:installation, @housing]) do |f| %>
+  <%= f.error_messages %>
+
+<%= hidden_field_tag('housing[installation_id]', @installation.id) %>
+<p>
+Neighborhood:<br />
+<%= f.collection_select(:neighborhood_id, @neighborhoods, :id, :name, {:prompt => true}) %>
+</p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :rank %><br />
+    <%= f.text_field :rank %>
+  </p>
+  <p>
+    <%= f.label :size %><br />
+    <%= f.text_field :size %>
+  </p>
+  <p>
+    <%= f.label :info %><br />
+    <%= f.text_area :info %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+</div>
+<%= link_to 'Back', housings_path %>

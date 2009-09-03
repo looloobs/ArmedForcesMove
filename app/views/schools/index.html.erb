@@ -1,0 +1,15 @@
+<h1><%= @installation.name %>: Places to Learn</h1>
+<span class="addeat"><%= link_to image_tag("/images/add_school.png", :border=>0), new_installation_school_path(@installation, @school) %></span>
+
+<% @schools.each do |school| %>
+<div id= "school">
+<div id= "school_main">	
+<h1><%= link_to school.name, installation_school_path(@installation, school) %> <%= rank_image_tag(school.average_rates.to_i) %><br /></h1>
+<%= link_to school.web, school.web %><br />
+<div class="school_specific">  
+<%= school.neighborhood.name %><br />
+<%= school.level %>
+</div>
+</div>
+</div>
+<% end %>

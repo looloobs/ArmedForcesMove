@@ -1,0 +1,19 @@
+<div id="housing">
+<div id="left">
+<h1><%=h @housing.name %><%= rank_image_tag(@housing.average_rates.to_i) %><br /></h1>
+<div class="housing_extras">
+	Rank: <%=h @housing.rank %><br />
+	Size: <%=h @housing.size %><br />
+	Bedroom: <%=h @housing.rank %><br />
+	Bathroom: <%=h @housing.size %><br />
+</div>
+<span class="housing_detail_image"><%= image_tag("/images/upload_photo.png", :border=>0) %></span>
+
+
+
+</div>
+<span class="addcomment"><%= link_to image_tag("/images/add_a_comment.png", :border=>0), new_installation_housing_comment_path(@installation, @housing) %></span>
+
+
+<%= render :partial => "shared/comment", :collection => @comment %>
+</div>

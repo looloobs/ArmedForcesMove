@@ -1,0 +1,13 @@
+<h1><%= @installation.name %>: Places to Shop</h1>
+<span class="addshop"><%= link_to image_tag("/images/add_shop.png", :border=>0), new_installation_shop_path(@installation, @shop) %></span>
+
+<div id= "shop">
+	<% @shops.each do |shop| %>
+
+<div id= "shop_main">	
+<h1><%= link_to shop.name, installation_shop_path(@installation, shop) %><%= rank_image_tag(shop.average_rates.to_i) %></h1>
+<div class="shop_specific">  
+<%= shop.neighborhood.name %>
+</div>
+</div>	
+<% end %></div>

@@ -1,0 +1,13 @@
+<% form_for(@user) do |f| %>
+Username
+<%= text_field 'user', 'login' %>
+
+				
+
+Email Address
+<%= text_field 'user', 'email' %>
+
+
+
+<%= submit_tag 'Edit' %>
+<% end %>

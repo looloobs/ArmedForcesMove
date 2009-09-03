@@ -1,0 +1,32 @@
+<h1>Editing offpost</h1>
+
+<% form_for(@offpost) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :installation %><br />
+    <%= f.text_field :installation %>
+  </p>
+  <p>
+    <%= f.label :neighborhood %><br />
+    <%= f.text_field :neighborhood %>
+  </p>
+  <p>
+    <%= f.label :distance %><br />
+    <%= f.text_field :distance %>
+  </p>
+  <p>
+    <%= f.label :drive %><br />
+    <%= f.text_field :drive %>
+  </p>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @offpost %> |
+<%= link_to 'Back', offposts_path %>

@@ -1,0 +1,20 @@
+<h1>Listing play_categories</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @play_categories.each do |play_category| %>
+  <tr>
+    <td><%=h play_category.name %></td>
+    <td><%= link_to 'Show', play_category %></td>
+    <td><%= link_to 'Edit', edit_play_category_path(play_category) %></td>
+    <td><%= link_to 'Destroy', play_category, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New play_category', new_play_category_path %>

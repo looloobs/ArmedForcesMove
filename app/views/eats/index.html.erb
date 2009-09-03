@@ -1,0 +1,18 @@
+<h1><%= @installation.name %>: Places to Eat</h1>
+<span class="addeat"><%= link_to image_tag("/images/add_eat.png", :border=>0), new_installation_eat_path(@installation, @eat) %></span>
+
+<div id= "eat">
+	<% @eats.each do |eat| %>
+
+<div id= "eat_main">	
+<h1><%= link_to eat.name, installation_eat_path(@installation, eat) %><%= rank_image_tag(eat.average_rates.to_i) %></h1>
+<div class="eat_specific">  
+<%= eat.price %>, <%= eat.kids %> <%= special_type(eat.special) %>
+</div>
+</div>	
+<% end %></div>
+
+
+<br />
+
+

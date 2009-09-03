@@ -1,0 +1,18 @@
+<h1>New Play Area</h1>
+
+<% form_for(@play_area) do |f| %>
+  <%= f.error_messages %>
+
+<%= hidden_field_tag('play_areas[installation_id]', @installation.id) %>
+
+<p>
+  <%= f.label :name %><br />
+  <%= f.text_field :name %>
+</p>
+
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', play_areas_path %>

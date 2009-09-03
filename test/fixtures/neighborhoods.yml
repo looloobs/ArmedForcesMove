@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  installation_id: 1
+  school_id: 1
+  name: MyString
+
+two:
+  installation_id: 1
+  school_id: 1
+  name: MyString

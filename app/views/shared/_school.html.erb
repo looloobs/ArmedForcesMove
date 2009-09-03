@@ -1,0 +1,39 @@
+<% @preschools.each do |school| %>
+<div id= "eat">
+<table>
+<tr>
+<td>
+<div id= "eat_main">	
+<%= link_to school.name, school.web %> <%= rank_image_tag(school.average_rates.to_i) %><br />
+<span class="hl"><%= link_to 'Read More', installation_school_path(@installation, school) %></span>
+</div>
+	</td>
+</tr>
+
+
+
+
+
+<p>
+	</table></div>
+<% end %>
+
+<% @elementry.each do |school| %>
+<div id= "eat">
+<table>
+<tr>
+<td>
+<div id= "eat_main">	
+<%= link_to school.name, school.web %> <%= rank_image_tag(school.average_rates.to_i) %><br />
+<span class="hl"><%= link_to 'Read More', installation_school_path(@installation, school) %></span>
+</div>
+	</td>
+</tr>
+
+
+
+
+
+<p>
+	</table></div>
+<% end %>

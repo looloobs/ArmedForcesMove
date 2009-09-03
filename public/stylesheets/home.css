@@ -1,0 +1,100 @@
+/* home */
+body {
+    margin:0;
+    padding:0px;
+    border:0;			/* This removes the border around the viewport in old versions of IE */
+    width:100%;
+    min-width:1000px;    /* Minimum width of layout - remove line if not required */
+
+}
+#wrap {
+ 	width:1000px;
+ 	margin:0 auto;
+ }
+#user{
+	position:relative;
+	margin-top:10px;
+	margin-left:80%;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+}
+
+#home {
+	background-color:white;
+}
+#notice {
+	position:absolute;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 20px;
+	color: #102D49;
+	margin-left:400px;
+	margin-top:-35px;
+}
+.search{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 25px;
+	color: #D42027;
+}
+.search a {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 25px;
+	color: #D42027;
+	text-decoration:none;
+}
+.search a:hover {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 25px;
+	color: #D42027;
+	background:white;
+	text-decoration:none;
+}
+
+#logo {
+	float:left;
+	margin-left:10%;
+	
+}
+#home_light_blue {
+	position:relative;
+	margin-top:95px;
+	background: url(/images/lightblue_bg.jpg) repeat-x;
+	height:188px;
+
+}
+#home_dark_blue {
+	position:relative;
+	background: url(/images/darkblue_bg.jpg) repeat-x;
+	height:261px;
+}
+#form {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 25px;
+	color: #102D49;
+	margin-left:35%;
+
+	
+}
+#form input {
+	margin-top:7%;
+	background:#fff;
+	border:0px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 25px;
+	color: #102D49;	
+}
+#home_box_one {
+	background: url(/images/home_box_1.jpg) no-repeat;
+	height:246px;
+	margin-left:100px;
+}
+#home_box_two {
+	background: url(/images/home_box_2.jpg) no-repeat;
+	height:246px;
+	margin-left:300px;
+}
+#home_box_three {
+	background: url(/images/home_box_3.jpg) no-repeat;
+	height:246px;
+	margin-left:300px;
+}

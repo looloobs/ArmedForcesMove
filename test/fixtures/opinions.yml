@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  author_name: MyString
+  stars: 1
+  content: MyText
+  opinionable_id: 1
+  opinionable_type: MyString
+
+two:
+  author_name: MyString
+  stars: 1
+  content: MyText
+  opinionable_id: 1
+  opinionable_type: MyString

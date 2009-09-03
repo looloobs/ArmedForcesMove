@@ -1,0 +1,52 @@
+<h1>Editing installation</h1>
+
+<% form_for(@installation) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :zipcode %><br />
+    <%= f.text_field :zipcode %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :url_slug %><br />
+    <%= f.text_field :url_slug %>
+  </p>
+  <p>
+    <%= f.label :inprocessing %><br />
+    <%= f.text_field :inprocessing %>
+  </p>
+  <p>
+    <%= f.label :templodging %><br />
+    <%= f.text_field :templodging %>
+  </p>
+  <p>
+    <%= f.label :family %><br />
+    <%= f.text_field :family %>
+  </p>
+  <p>
+    <%= f.label :commissary %><br />
+    <%= f.text_field :commissary %>
+  </p>
+  <p>
+    <%= f.label :px %><br />
+    <%= f.text_field :px %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @installation %> |
+<%= link_to 'Back', installations_path %>

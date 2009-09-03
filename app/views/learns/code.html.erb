@@ -1,0 +1,12 @@
+<% javascript 'dynamic_offposts' %>
+
+
+ <p>
+  <label for="learn_installation_id">Country:</label>
+  <%= f.collection_select :installation_id, Installation.find(:all), :id, :name, :prompt => "Select an Installation" %>
+</p>
+
+<p id="offpost_field">
+  <label for="learn_offpost_id">State or Province:</label>
+  <%= f.collection_select :neighborhood, Offpost.find(:all), :neighborhood, :offpost_id, :prompt => "Select a State" %>
+</p>

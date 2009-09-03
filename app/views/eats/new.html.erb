@@ -1,0 +1,66 @@
+<h1>Add A Place to Eat in the <%= @installation.name %> Area</h1><br />
+
+<div id="form">
+<% form_for ([:installation, @eat]) do |f| %>
+  <%= f.error_messages :header_message => "Invalid Restaurant!", 
+:message => "You'll need to fix the following fields:", :header_tag => :h4 %>
+
+
+<%= hidden_field_tag('eat[installation_id]', @installation.id) %>
+<p>
+<%= f.label :neighborhood_id %><br />
+<%= f.collection_select(:neighborhood_id, @neighborhoods, :id, :name, {:prompt => true}) %>
+</p>
+  <p>
+    <%= f.label :food %><br />
+    <%= f.select(:food, [["Please Select", ""], ["American", "American"], ["Asian", "Asian"], ["Greek", "Greek"], ["Indian", "Indian"], ["Italian", "Italian"], ["Mexican", "Mexican"]]) %> 
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+ 	<%= f.label :state %>
+    <%= f.text_field :state, :size => 2 %> 
+
+	<%= f.label :zip %>
+    <%= f.text_field :zip, :size => 5 %>
+  </p>
+
+  <p>
+    <%= f.label :web %><br />
+    <%= f.text_field :web %>
+  </p>
+  <p>
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :price %><br />
+    <%= f.select(:price, [["Select One", ""], ["$$", "$$"], ["$$$", "$$$"], ["$$$$", "$$$$"]]) %> 
+  </p>
+  <p>
+    <%= f.label :kids %><br />
+    <%= f.select(:kids, [["Select One", ""],["Kid Friendly", "Kid Friendly"], ["No Kids", "No Kids"]]) %>
+  </p>
+  <p>
+    Special Occasion Spot:<br />
+    <%= f.check_box :special %>
+  </p>
+  <p>
+    Military Discount:<br />
+    <%= f.check_box :military %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+</div>

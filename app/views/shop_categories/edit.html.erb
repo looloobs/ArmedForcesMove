@@ -1,0 +1,12 @@
+<h1>Editing shop_category</h1>
+
+<% form_for(@shop_category) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @shop_category %> |
+<%= link_to 'Back', shop_categories_path %>

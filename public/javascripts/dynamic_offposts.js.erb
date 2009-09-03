@@ -1,0 +1,26 @@
+// javascripts/dynamic_states.js.erb
+var offposts = new Array();
+<% for offpost in @offposts -%>
+  offposts.push(new Array(<%= offpost.installation_id %>, '<%=h offpost.neighborhood %>', <%= offpost.id %>));
+<% end -%>
+
+function installationSelected() {
+  installation_id = $('learn_installation_id').getValue();
+  options = $('learn_offpost_id').options;
+  options.length = 1;
+  offposts.each(function(offpost) {
+    if (offpost[0] == installation_id) {
+      options[options.length] = new Option(offpost[1], offpost[2]);
+    }
+  });
+  if (options.length == 1) {
+    $('offpost_field').hide();
+  } else {
+    $('offpost_field').show();
+  }
+}
+
+document.observe('dom:loaded', function() {
+  installationSelected();
+  $('learn_installation_id').observe('change', installationSelected);
+});

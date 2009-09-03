@@ -1,0 +1,56 @@
+<h1>Editing shop</h1>
+
+<% form_for(@shop) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :installation_id %><br />
+    <%= f.text_field :installation_id %>
+  </p>
+  <p>
+    <%= f.label :category %><br />
+    <%= f.text_field :category %>
+  </p>
+  <p>
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </p>
+  <p>
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :web %><br />
+    <%= f.text_field :web %>
+  </p>
+  <p>
+    <%= f.label :neighborhood %><br />
+    <%= f.text_field :neighborhood %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @shop %> |
+<%= link_to 'Back', shops_path %>
