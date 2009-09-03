@@ -1,5 +1,5 @@
 class RolesController < ApplicationController
-  require_role "admin"
+  
   def index
   end
 
