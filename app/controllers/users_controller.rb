@@ -38,14 +38,14 @@ class UsersController < ApplicationController
 end
 
 def edit    
-  @user = User.find(params[:id], :conditions => ["id = ?", current_user.id])
+  @user = current_user
 end
 
 def update  
-  @user = User.find(params[:id])
+  @user = current_user
   if @user.update_attributes(params[:user])
     flash[:notice] = 'Shop was successfully updated.'
-    redirect_to { redirect_to(@user) }
+    redirect_to { redirect_to(current_user) }
   else
     flash[:error] = 'Unsuccessful. Try again.'
     redirect_to :action => 'edit', :id => @user

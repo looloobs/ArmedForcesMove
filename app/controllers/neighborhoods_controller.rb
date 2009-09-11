@@ -52,7 +52,7 @@ class NeighborhoodsController < ApplicationController
     respond_to do |format|
       if @neighborhood.save
         flash[:notice] = 'Neighborhood was successfully created.'
-        format.html { redirect_to (@neighborhood) }
+        format.html { redirect_to installation_neighborhoods_path(@installation) }
         format.xml  { render :xml => @neighborhood, :status => :created, :location => @neighborhood }
       else
         format.html { render :action => "new" }
