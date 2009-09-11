@@ -44,12 +44,13 @@ class HousingsController < ApplicationController
   # POST /housings
   # POST /housings.xml
   def create
+    @installation = Installation.find(params[:installation_id])
     @housing = Housing.new(params[:housing])
 
     respond_to do |format|
       if @housing.save
         flash[:notice] = 'Housing was successfully created.'
-        format.html { redirect_to(@housing) }
+        format.html { redirect_to installation_housings_path(@installation) }
         format.xml  { render :xml => @housing, :status => :created, :location => @housing }
       else
         format.html { render :action => "new" }
