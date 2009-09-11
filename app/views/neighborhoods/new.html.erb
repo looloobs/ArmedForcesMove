@@ -6,10 +6,21 @@
   <p>
 	<%= hidden_field_tag('neighborhood[installation_id]', @installation.id) %>
   </p>
-
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :info %><br />
+    <%= f.text_field :info %>
+  </p>
+  <p>
+    <%= f.label :drive %><br />
+    <%= f.text_field :drive %>
+  </p>
+  <p>
+    <%= f.label :distance %><br />
+    <%= f.text_field :distance %>
   </p>
   <p>
     <%= f.submit 'Create' %>
