@@ -4,7 +4,7 @@ class HousingsController < ApplicationController
   def index
    @installation = Installation.find(params[:installation_id])
     @housings = @installation.housings
-    @neighborhoods=@installation.neighborhoods
+    @neighborhoods = @installation.neighborhoods
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @housings }

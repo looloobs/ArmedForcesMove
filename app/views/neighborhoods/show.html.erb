@@ -7,6 +7,7 @@
 <%=h @neighborhood.drive %>
 <%=h @neighborhood.info %>
 <p>
+
 <h2>Preschools in <%=h @neighborhood.name %></h2>
 
 <% @preschools.each do |school| %>
@@ -30,7 +31,7 @@
 <table>
 <tr>
     <td>
-	<div id= "school_hoods">	
+<div id= "school_hoods">	
 		<h1><%= link_to school.name, installation_school_path(@installation, school) %> <%= rank_image_tag(school.average_rates.to_i)	%><br /></h1>
 		<%= link_to school.web, school.web %><br />
 	</td>

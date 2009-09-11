@@ -1,22 +1,14 @@
-<h1>Listing neighborhoods</h1>
 
-<table>
-  <tr>
-    <th>Installation</th>
-    <th>School</th>
-    <th>Name</th>
-  </tr>
-
-<% @neighborhoods.each do |neighborhood| %>
-  <tr>
-    <td><%=h neighborhood.name %></td>
-    <td><%= link_to 'Show', neighborhood %></td>
-    <td><%= link_to 'Edit', edit_neighborhood_path(neighborhood) %></td>
-    <td><%= link_to 'Destroy', neighborhood, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
+<h1><%=h @installation.name %>: Neighborhoods</h1>
 <br />
-
-<%= link_to 'New neighborhood', new_neighborhood_path %>
+<% @neighborhoods.each do |neighborhood| %>
+<div id= "housing">
+<div id= "housing_main">	
+<h1><%= link_to neighborhood.name, installation_neighborhood_path(@installation, neighborhood) %> <%= rank_image_tag(neighborhood.average_rates.to_i) %><br /></h1>
+<div class="housing_specific">  
+<%= neighborhood.drive %><br />
+<%= neighborhood.distance %>
+</div>
+</div>
+</div>
+<% end %>
