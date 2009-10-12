@@ -2,10 +2,10 @@
 set :application, "AFMove"
 
 # The URL to your applications repository
-set :repository,  "git://github.com:looloobs/ArmedForcesMove.git"
+set :repository,  "git://github.com/looloobs/ArmedForcesMove.git"
 set :scm, "git"
 set :scm_verbose, true
-set :git_enable_submodules, 1
+#set :git_enable_submodules, 1
 # Uncomment this line if you're using SVN.  It makes deployments much faster
 set :deploy_via, :remote_cache
 

@@ -20,7 +20,7 @@ test:
         encoding: utf8
         reconnect: true
         database: afmove2_afmove
-        host: 127.0.0.1
+        host: localhost
         pool: 5
         username: afmove2_admin
         password: lufury2
