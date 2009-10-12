@@ -223,6 +223,14 @@ img {
 	padding: 3px;
 	text-decoration:none;
 }
+#notice3 {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+	margin:10px;
+	padding-top:5px;
+
+}
 /* forms */
 #form {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;

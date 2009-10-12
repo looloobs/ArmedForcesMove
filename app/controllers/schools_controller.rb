@@ -51,8 +51,8 @@ class SchoolsController < ApplicationController
     @neighborhoods = @installation.neighborhoods
     respond_to do |format|
       if @school.save
-        flash[:notice] = 'School was successfully created.'
-        format.html { redirect_to(@installation, @school) }
+        flash[:notice] = 'A school was successfully created.'
+        format.html { redirect_to installation_schools_path(@installation) }
         format.xml  { render :xml => @school, :status => :created, :location => @school }
       else
         format.html { render :action => "new" }
@@ -69,7 +69,7 @@ class SchoolsController < ApplicationController
     respond_to do |format|
       if @school.update_attributes(params[:school])
         flash[:notice] = 'School was successfully updated.'
-        format.html { redirect_to(@school) }
+        format.html { redirect_to installation_school_path(@installation @school) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

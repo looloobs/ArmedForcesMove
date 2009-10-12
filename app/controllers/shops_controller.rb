@@ -16,7 +16,7 @@ class ShopsController < ApplicationController
   def show
     @installation = Installation.find(params[:installation_id]) 
     @shop = Shop.find(params[:id])
-    @neighborhood = @shop.neighborhood
+    @neighborhoods = @shop.neighborhood
     @shopcategories = @shop.shop_category
     @comment = @shop.comments
 
@@ -43,6 +43,9 @@ class ShopsController < ApplicationController
   # GET /shops/1/edit
   def edit
     @shop = Shop.find(params[:id])
+    @installation = Installation.find(params[:installation_id]) 
+    @neighborhoods = @installation.neighborhoods
+    @shopcategories = ShopCategory.all
   end
 
   # POST /shops
@@ -54,8 +57,8 @@ class ShopsController < ApplicationController
     @neighborhoods = @installation.neighborhoods
     respond_to do |format|
       if @shop.save
-        flash[:notice] = 'Shop was successfully created.'
-        format.html { redirect_to :back }
+        flash[:notice] = 'A shop was successfully created.'
+        format.html { redirect_to installation_shops_path(@installation) }
         format.xml  { render :xml => @shop, :status => :created, :location => @shop }
       else
         format.html { render :action => "new" }
@@ -68,11 +71,13 @@ class ShopsController < ApplicationController
   # PUT /shops/1.xml
   def update
     @shop = Shop.find(params[:id])
-
+    @installation = Installation.find(params[:installation_id]) 
+    @neighborhoods = @installation.neighborhoods
+    @shopcategories = ShopCategory.all
     respond_to do |format|
       if @shop.update_attributes(params[:shop])
-        flash[:notice] = 'Shop was successfully updated.'
-        format.html { redirect_to(@shop) }
+        flash[:notice] = 'A shop was successfully updated.'
+        format.html { redirect_to installation_shop_path(@installation, @shop)  }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

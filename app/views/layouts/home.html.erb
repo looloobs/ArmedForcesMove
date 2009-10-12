@@ -21,7 +21,11 @@
 	<div id="home_light_blue">
 	
 		<div id="form">
-		<div class="search">
+		<div class="search">	
+			<div id="notice2">
+			<%= flash[:notice2] %>
+			</div>
+			
 			<%= yield %>
 					
 		</div>
@@ -29,7 +33,7 @@
 		</div>
 		<div id="notice">
 		<%= flash[:notice] %>
-		</di>
+		</div>
 	</div>
 		<div id="home_dark_blue">
 			<div id= "wrap">

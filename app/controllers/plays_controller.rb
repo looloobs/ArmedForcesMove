@@ -42,17 +42,22 @@ class PlaysController < ApplicationController
   # GET /plays/1/edit
   def edit
     @play = Play.find(params[:id])
+    @installation = Installation.find(params[:installation_id])
+    @playareas = @installation.play_areas
+    @playcategories = PlayCategory.all
   end
 
   # POST /plays
   # POST /plays.xml
   def create
     @play = Play.new(params[:play])
-
+    @installation = Installation.find(params[:installation_id])
+    @playareas = @installation.play_areas
+    @playcategories = PlayCategory.all
     respond_to do |format|
       if @play.save
-        flash[:notice] = 'Play was successfully created.'
-        format.html { redirect_to :back }
+        flash[:notice] = 'Place to play was successfully created.'
+        format.html { redirect_to installation_plays_path(@installation) }
         format.xml  { render :xml => @play, :status => :created, :location => @play }
       else
         format.html { render :action => "new" }
@@ -65,11 +70,13 @@ class PlaysController < ApplicationController
   # PUT /plays/1.xml
   def update
     @play = Play.find(params[:id])
-
+    @installation = Installation.find(params[:installation_id])
+    @playareas = @installation.play_areas
+    @playcategories = PlayCategory.all
     respond_to do |format|
       if @play.update_attributes(params[:play])
         flash[:notice] = 'Play was successfully updated.'
-        format.html { redirect_to(@play) }
+        format.html { redirect_to installation_play_path(@installation, @play) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

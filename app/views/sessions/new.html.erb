@@ -11,8 +11,12 @@ We know it is really annoying to have to sign into every site you visit, but we 
 
 <p><%= label_tag 'password' %><br/>
 <%= password_field_tag 'password', nil %></p>
-<p><%= submit_tag 'Log in' %></p>
+
+<div id="notice3">
+<%= flash[:notice3] %>
 </div>
+<p><%= submit_tag 'Log in' %></p>
+
 
 <!-- Uncomment this if you want this functionality
 <p><%= label_tag 'remember_me', 'Remember me' %>
@@ -20,6 +24,6 @@ We know it is really annoying to have to sign into every site you visit, but we 
 -->
 <p>Not Signed Up? We only ask 4 simple questions. <span class="login_boxes"><%= link_to 'Sign Me Up!', new_user_path %></span></p>
 
-
+</div>
 <% end -%>
 </div>

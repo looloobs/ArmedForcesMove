@@ -67,7 +67,7 @@ class HousingsController < ApplicationController
     respond_to do |format|
       if @housing.update_attributes(params[:housing])
         flash[:notice] = 'Housing was successfully updated.'
-        format.html { redirect_to(@housing) }
+        format.html { redirect_to installation_housing_path(@installation, @housing) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

@@ -53,8 +53,8 @@ class EatsController < ApplicationController
     @neighborhoods = @installation.neighborhoods
     respond_to do |format|
       if @eat.save
-        flash[:notice] = 'Eat was successfully created.'
-        format.html { redirect_to :back }
+        flash[:notice] = 'Place to eat was successfully created.'
+        format.html { redirect_to installation_eats_path(@installation) }
         format.xml  { render :xml => @eat, :status => :created, :location => @eat }
       else
         format.html { render :action => "new" }
@@ -71,7 +71,7 @@ class EatsController < ApplicationController
     respond_to do |format|
       if @eat.update_attributes(params[:eat])
         flash[:notice] = 'Eat was successfully updated.'
-        format.html { redirect_to :back }
+        format.html { redirect_to installation_eat_path(@installation, @eat) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

@@ -1,19 +1,20 @@
 <h1>Editing play</h1>
+<div id="form">
+<% form_for ([@installation, @play]) do |f| %>
+ <%= f.error_messages :header_message => "Invalid play!", 
+:message => "You'll need to fix the following fields:", :header_tag => :h4 %>
 
-<% form_for(@play) do |f| %>
-  <%= f.error_messages %>
+
+
+<%= hidden_field_tag('play[installation_id]', @installation.id) %>
 
   <p>
-    <%= f.label :installation_id %><br />
-    <%= f.text_field :installation_id %>
+    <%= f.label :play_area_id %><br />
+   <%= f.collection_select(:play_area_id, @playareas, :id, :name, {:prompt => true}) %>
   </p>
   <p>
-    <%= f.label :neighborhood %><br />
-    <%= f.text_field :neighborhood %>
-  </p>
-  <p>
-    <%= f.label :type %><br />
-    <%= f.text_field :type %>
+	<%= f.label :play_category_id %><br />
+	<%= f.collection_select(:play_category_id, @playcategories, :id, :name, {:prompt => true}) %>
   </p>
   <p>
     <%= f.label :name %><br />
@@ -44,9 +45,7 @@
     <%= f.text_field :web %>
   </p>
   <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit 'Create' %>
   </p>
 <% end %>
-
-<%= link_to 'Show', @play %> |
-<%= link_to 'Back', plays_path %>
+</div>

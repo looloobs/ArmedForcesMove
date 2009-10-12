@@ -12,8 +12,8 @@
 <%= f.collection_select(:neighborhood_id, @neighborhoods, :id, :name, {:prompt => true}) %>
 </p>
 <p>
-<%= f.label :shop_categories_id %><br />
-<%= f.collection_select(:shop_categories_id, @shopcategories, :id, :name, {:prompt => true}) %>
+<%= f.label :shop_category_id %><br />
+<%= f.collection_select(:shop_category_id, @shopcategories, :id, :name, {:prompt => true}) %>
 </p>
 <p>
     <%= f.label :store %><br />
@@ -51,4 +51,3 @@
   </p>
 <% end %>
 </div>
-<%= link_to 'Back', shops_path %>

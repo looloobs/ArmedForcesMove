@@ -1,3 +1,4 @@
 class ShopCategory < ActiveRecord::Base
-  has_many :shop_categories, :through => :shops
+  has_many :shops
+  
 end

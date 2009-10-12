@@ -1,20 +1,26 @@
-<h1>Editing shop</h1>
+<h1>Edit shop</h1>
+<div id="form">
+<% form_for ([@installation, @shop]) do |f| %>
+ <%= f.error_messages :header_message => "Invalid school!", 
+:message => "You'll need to fix the following fields:", :header_tag => :h4 %>
 
-<% form_for(@shop) do |f| %>
-  <%= f.error_messages %>
 
-  <p>
-    <%= f.label :installation_id %><br />
-    <%= f.text_field :installation_id %>
-  </p>
-  <p>
-    <%= f.label :category %><br />
-    <%= f.text_field :category %>
-  </p>
-  <p>
-    <%= f.label :type %><br />
-    <%= f.text_field :type %>
-  </p>
+
+<%= hidden_field_tag('shop[installation_id]', @installation.id) %>
+<p>
+<%= f.label :neighborhood_id %><br />
+<%= f.collection_select(:neighborhood_id, @neighborhoods, :id, :name, {:prompt => true}) %>
+</p>
+
+<p>
+<%= f.label :shop_category_id %><br />
+<%= f.collection_select(:shop_category_id, @shopcategories, :id, :name, {:prompt => true}) %>
+</p>
+
+<p>
+    <%= f.label :store %><br />
+    <%= f.select(:store, [["Please Select", ""], ["Chain Store", "Chain Store"], ["Local Store", "Local Store"]]) %> 
+</p>
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
@@ -28,12 +34,11 @@
     <%= f.text_field :city %>
   </p>
   <p>
-    <%= f.label :state %><br />
-    <%= f.text_field :state %>
-  </p>
-  <p>
-    <%= f.label :zip %><br />
-    <%= f.text_field :zip %>
+ 	<%= f.label :state %>
+    <%= f.text_field :state, :size => 2 %> 
+
+	<%= f.label :zip %>
+    <%= f.text_field :zip, :size => 5 %>
   </p>
   <p>
     <%= f.label :phone %><br />
@@ -44,13 +49,7 @@
     <%= f.text_field :web %>
   </p>
   <p>
-    <%= f.label :neighborhood %><br />
-    <%= f.text_field :neighborhood %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit 'Create' %>
   </p>
 <% end %>
-
-<%= link_to 'Show', @shop %> |
-<%= link_to 'Back', shops_path %>
+</div>
