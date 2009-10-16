@@ -3,7 +3,6 @@ class AddNeighborhoodToShops < ActiveRecord::Migration
     change_table :shops do |t| 
       t.remove :neighborhood
       t.integer :neighborhood_id
-      t.string :type
     end
   end
 
