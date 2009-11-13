@@ -7,6 +7,12 @@ body {
     min-width:1000px;    /* Minimum width of layout - remove line if not required */
 
 }
+#text {
+	margin-top:-20px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+}
 #wrap {
  	width:1000px;
  	margin:0 auto;

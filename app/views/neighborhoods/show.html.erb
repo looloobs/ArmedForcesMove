@@ -1,13 +1,16 @@
 <%= render_flash_messages %>
 
 <h1><%=h @neighborhood.name %></h1>
+
 <div class= "indent">
+<h2>
 <p>
 <%=h @neighborhood.distance %>
 <%=h @neighborhood.drive %>
 <%=h @neighborhood.info %>
-<p>
-
+</p>
+</h2>
+<!--
 <h2>Preschools in <%=h @neighborhood.name %></h2>
 
 <% @preschools.each do |school| %>
@@ -71,6 +74,7 @@
 </tr>
 </table>
 </div>
-<% end %>
+<% end %> -->
 </div>
+
 

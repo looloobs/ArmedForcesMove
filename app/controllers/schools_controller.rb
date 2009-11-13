@@ -41,6 +41,7 @@ class SchoolsController < ApplicationController
   # GET /schools/1/edit
   def edit
     @school = School.find(params[:id])
+    @installation = Installation.find(params[:installation_id]) 
   end
 
   # POST /schools

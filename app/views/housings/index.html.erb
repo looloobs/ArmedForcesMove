@@ -1,5 +1,5 @@
 <h1><%= @installation.name %>: Places to Live</h1>
-<h2><%= link_to 'Explore Local Neighborhoods-->', installation_neighborhoods_path(@installation)  %></h2> 
+<h2><%= link_to image_tag("/images/neighborhoods.png", :border=>0), installation_neighborhoods_path(@installation)%></h2> 
 <br />
 <% @housings.each do |housing| %>
 <div id= "housing">

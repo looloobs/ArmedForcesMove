@@ -177,6 +177,11 @@ p {
 img {
 	
 }
+.edit {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	color: #102D49;
+}
 .right {
 	float:right;
 }
@@ -282,7 +287,8 @@ img {
 #flash_messages p {
   padding: 15px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-  font-size: 14px;
+  font-size: 16px;
+  font-color: red;
 
 }
  
@@ -294,6 +300,9 @@ img {
 #flash_messages p.notice {
   background: #fff;
   border: 1px solid #D42027;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 16px;
+  color: red;
 }
  
 #flash_messages p.message {
@@ -301,6 +310,14 @@ img {
   border: 1px solid #D42027;
 }
 
+#flash {
+  margin-top:10px;
+  margin-bottom:10px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 16px;
+  color: red;
+
+}
 
 /* installations */
 #installation {

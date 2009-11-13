@@ -1,5 +1,6 @@
 class EatsController < ApplicationController
   #require_role "admin"
+  before_filter :login_required, :only =>  [ :new, :edit, :update ]
   # GET /eats
   # GET /eats.xml
   def index

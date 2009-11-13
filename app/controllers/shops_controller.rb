@@ -57,7 +57,7 @@ class ShopsController < ApplicationController
     @neighborhoods = @installation.neighborhoods
     respond_to do |format|
       if @shop.save
-        flash[:notice] = 'A shop was successfully created.'
+        flash[:notice] = 'Shop was successfully created.' 
         format.html { redirect_to installation_shops_path(@installation) }
         format.xml  { render :xml => @shop, :status => :created, :location => @shop }
       else

@@ -1,4 +1,5 @@
 class HousingsController < ApplicationController
+  before_filter :login_required, :only => [:new, :create]
   # GET /housings
   # GET /housings.xml
   def index
