@@ -9,7 +9,7 @@
 <div id= "eat_main">	
 <h1><%= link_to eat.name, installation_eat_path(@installation, eat) %><%= rank_image_tag(eat.average_rates.to_i) %></h1>
 <div class="eat_specific">  
-<%= eat.price %>, <%= eat.kids %> <%= special_type(eat.special) %>
+<%= eat.neighborhood.name %>, <%= eat.price %>, <%= eat.kids %> <%= special_type(eat.special) %>
 </div>
 </div>	
 <% end %></div>
