@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
     include PolyParent
-    parent_resources :installation, :housing, :eat, :school, :shop, :play, :offpost
+    parent_resources :installation, :housing, :eat, :school, :shop, :play, :offpost, :neighborhood
     before_filter :set_poly_parents
     before_filter :login_required
   

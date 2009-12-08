@@ -7,6 +7,7 @@ class Neighborhood < ActiveRecord::Base
   has_many :schools
   has_many :eats
   has_many :shops
+  has_many :plays
   has_many :comments, :as => :commentable
   
   

@@ -19,6 +19,10 @@ class NeighborhoodsController < ApplicationController
     @elementary = @neighborhood.schools.elementary
     @middle = @neighborhood.schools.middle
     @high = @neighborhood.schools.high
+    @eats = @neighborhood.eats
+    @shops = @neighborhood.shops
+    @plays = @neighborhood.plays
+    @comment = @neighborhood.comments
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @neighborhood }

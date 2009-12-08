@@ -52,6 +52,8 @@
 	            </div>
 	            <div class="col3">
 					<!-- Column 3 start -->
+					<%= link_to image_tag("/images/twitter.png", :border=>0), 'http://twitter.com/armedforcesmove'  %>
+					<p>
 	<%= link_to image_tag("http://www.lduhtrp.net/image-3316078-10376222", :border=>0), 'http://www.anrdoezrs.net/click-3316078-10376222'  %>
 					<!-- Column 3 end -->
 				</div>
@@ -68,5 +70,7 @@
 		
 		</div>
 	</div>
+	<%= render :partial => "shared/analytics" if RAILS_ENV == "production" %>
+	
 </body>
 </html>

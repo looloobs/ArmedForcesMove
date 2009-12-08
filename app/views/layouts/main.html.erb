@@ -38,6 +38,6 @@
 <div id="main_box_two"></div>
 <div id="main_box_three"></div>
 </div>
-
+<%= render :partial => "shared/analytics" if RAILS_ENV == "production" %>
 </body>
 </html>

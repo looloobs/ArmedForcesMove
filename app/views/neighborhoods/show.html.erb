@@ -5,11 +5,63 @@
 <div class= "indent">
 <h2>
 <p>
-<%=h @neighborhood.distance %>
-<%=h @neighborhood.drive %>
-<%=h @neighborhood.info %>
+<%=h @neighborhood.distance %><br />
+<%=h @neighborhood.drive %><br />
 </p>
 </h2>
+<%=h @neighborhood.info %><br />
+<span class="addcomment"><%= link_to image_tag("/images/add_a_comment.png", :border=>0), new_installation_neighborhood_comment_path(@installation, @neighborhood) %></span>
+<%= render :partial => "shared/comment", :collection => @comment %>
+
+<h2>Restaurants in <%=h @neighborhood.name %></h2>
+<% @eats.each do |eat| %>
+<div id= "school">
+<table>
+<tr>
+    <td>
+	<div id= "school_hoods">	
+		<h1><%= link_to eat.name, installation_eat_path(@installation, eat) %> <%= rank_image_tag(eat.average_rates.to_i)	%><br /></h1>
+		<%= link_to eat.web, eat.web %><br />
+	</td>
+	</div>
+</tr>
+</table>
+</div>
+<% end %>
+<p>
+<h2>Shops in <%=h @neighborhood.name %></h2>
+<% @shops.each do |shop| %>
+<div id= "school">
+<table>
+<tr>
+    <td>
+	<div id= "school_hoods">	
+		<h1><%= link_to shop.name, installation_shop_path(@installation, shop) %> <%= rank_image_tag(shop.average_rates.to_i)	%><br /></h1>
+		<%= link_to shop.web, shop.web %><br />
+	</td>
+	</div>
+</tr>
+</table>
+</div>
+<% end %>
+</p>
+<p>
+<h2>Places to Play in <%=h @neighborhood.name %></h2>
+<% @plays.each do |play| %>
+<div id= "school">
+<table>
+<tr>
+    <td>
+	<div id= "school_hoods">	
+		<h1><%= link_to play.name, installation_play_path(@installation, play) %> <%= rank_image_tag(play.average_rates.to_i)	%><br /></h1>
+		<%= link_to play.web, play.web %><br />
+	</td>
+	</div>
+</tr>
+</table>
+</div>
+<% end %>
+</p>
 <!--
 <h2>Preschools in <%=h @neighborhood.name %></h2>
 
