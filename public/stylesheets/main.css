@@ -94,6 +94,8 @@ ul#menu {
 		ul#menu li a.live {
 			background: url(/images/main_buttons/live.png) no-repeat top center;
 			width: 177px;
+			display: block;
+			height: 62px;
 			}
 		ul#menu li a.learn {
 			background: url(/images/main_buttons/learn.png) no-repeat top center;
