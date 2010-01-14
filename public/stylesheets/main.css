@@ -122,6 +122,7 @@ ul#menu {
 			ul#menu li a.play:hover, ul#menu li a.play:active,
 			ul#menu li a.qa:hover, ul#menu li a.qa:active {
 				background-position: bottom center;
+				display: block;
 			}
 		body#live ul#menu li a.live,
 		body#about ul#menu li a.learn,
