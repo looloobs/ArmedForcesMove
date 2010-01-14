@@ -115,7 +115,7 @@ ul#menu {
 			background: url(/images/main_buttons/q&a.png) no-repeat top center;
 			width: 173px;
 			}
-			ul#menu li a.live:hover, ul#menu li a.live:active,
+		/*	ul#menu li a.live:hover, ul#menu li a.live:active,
 			ul#menu li a.learn:hover, ul#menu li a.learn:active,
 			ul#menu li a.eat:hover, ul#menu li a.eat:active,
 			ul#menu li a.shop:hover, ul#menu li a.shop:active, 
@@ -129,5 +129,5 @@ ul#menu {
 		body#about ul#menu li a.learn,
 		body#contact ul#menu li a.contact {
 			background-position: center center;
-		}
+		}*/
 
