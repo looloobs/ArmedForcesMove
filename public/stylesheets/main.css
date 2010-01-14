@@ -123,6 +123,7 @@ ul#menu {
 			ul#menu li a.qa:hover, ul#menu li a.qa:active {
 				background-position: bottom center;
 				display: block;
+				height: 62px;
 			}
 		body#live ul#menu li a.live,
 		body#about ul#menu li a.learn,
