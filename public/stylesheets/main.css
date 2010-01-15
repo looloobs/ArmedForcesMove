@@ -101,22 +101,37 @@ ul#menu {
 		ul#menu li a.learn {
 			background: url(/images/main_buttons/learn.png) no-repeat top center;
 			width: 268px;
+			position:relative;
+			display: block;
+			height: 62px;
 		}
 		ul#menu li a.eat {
 			background: url(/images/main_buttons/eat.png) no-repeat top center;
 			width: 156px;
+			position:relative;
+			display: block;
+			height: 62px;
 			}
 		ul#menu li a.shop {
 			background: url(/images/main_buttons/shop.png) no-repeat top center;
 			width: 215px;
+			position:relative;
+			display: block;
+			height: 62px;
 			}
 		ul#menu li a.play {
 			background: url(/images/main_buttons/play.png) no-repeat top center;
 			width: 199px;
+			position:relative;
+			display: block;
+			height: 62px;
 			}
 		ul#menu li a.qa {
 			background: url(/images/main_buttons/q&a.png) no-repeat top center;
 			width: 173px;
+			position:relative;
+			display: block;
+			height: 62px;
 			}
 		/*	ul#menu li a.live:hover, ul#menu li a.live:active,
 			ul#menu li a.learn:hover, ul#menu li a.learn:active,
